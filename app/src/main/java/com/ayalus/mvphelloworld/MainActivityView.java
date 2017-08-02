@@ -13,34 +13,33 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+//important for MVP
 public class MainActivityView extends AppCompatActivity implements MainActivityInterface.View{
 
     private static final String TAG = "MainActivityView";
+    //Binding activities with Butter knife (really simple to implement)
     @BindView(R.id.edit_text_one)
     EditText editTextOne;
 
     @BindView(R.id.background)
     RelativeLayout relativeLayout;
 
-    MainActivityInterface.Presenter mPresenter;
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        mPresenter.onResume();
-    }
+    MainActivityInterface.Presenter mPresenter; //important for MVP
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
-        mPresenter = new MainActivityPresenter(this);
         Log.v(TAG, "onCreate called.....");
+        setContentView(R.layout.activity_main);
+        ButterKnife.bind(this); //for buttons.
+        mPresenter = new MainActivityPresenter(this);  //important for MVP
     }
 
+    //---------------------------------Buttons-----------------------------------------------------------------------------
+
+    //This logs & toasts what is inputted into the edit text field.
     @OnClick(R.id.button_one)
-    public void buttonPressed() {
+    public void buttonOnePressed() {
         Log.v(TAG, "button to toast pressed.");
         try {
             mPresenter.logString(editTextOne.getText().toString());
@@ -49,49 +48,16 @@ public class MainActivityView extends AppCompatActivity implements MainActivityI
         }
     }
 
+    //Change background color.
     @OnClick(R.id.button_two)
     public void buttonTwoPressed() {
         Log.v(TAG, "button to change color pressed.");
         mPresenter.changeBackgroundColor(relativeLayout,-1);
     }
 
-    @OnClick(R.id.button_three)
-    public void buttonTwoParseJson() {
-        Log.v(TAG, "button to parse the String Json.");
-        mPresenter.logStringJson();
-    }
 
     @Override
     public void showToast(String stringToast) {
-//        Log.v(TAG, "showToast called");
         Toast.makeText(this, stringToast+editTextOne.getText().toString(), Toast.LENGTH_SHORT).show();
-    }
-
-//---------------------------------override methods-----------------------------------------------------------------------------
-
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.v(TAG, "onStart called");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.v(TAG, "onPause called");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.v(TAG, "onStop called");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.v(TAG, "onDestroy called");
-
     }
 }
