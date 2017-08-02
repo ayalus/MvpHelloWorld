@@ -1,8 +1,9 @@
-#MvpHelloWorld
+# MvpHelloWorld
 
 Ive been searching for a simple MVP example and found NONE. Wierd right? Ive decided to share the most basic example.
 
 In this MVP Hello World app, you can see an example of the most basic posible form of Model View Presenter Design Patteren, as i understand it. It could be used as a template and expanded as needed.
+
 
 Branches: (for beginers, start with branch "mvp-simple-hello-world")
 
@@ -10,8 +11,11 @@ Branches: (for beginers, start with branch "mvp-simple-hello-world")
 
 2. master - added random functionality to preform things in the MVP design (still in progress).
 
-Run instructions:
 
-clone to requested folder.
-in Android Studio: File >> New >> import project..
-then git checkout into mvp-simple-hello-world with command: git checkout mvp-simple-hello-world
+Run instructions:
+- clone to requested folder.
+- in Android Studio: File >> New >> import project..
+
+then git checkout into mvp-simple-hello-world with command:
+git checkout mvp-simple-hello-world
+
