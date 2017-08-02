@@ -16,5 +16,7 @@ Run instructions:
 - clone to requested folder.
 - in Android Studio: File >> New >> import project..
 
+then git checkout into mvp-simple-hello-world with command:
+git checkout mvp-simple-hello-world
 
 
