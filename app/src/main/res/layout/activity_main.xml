@@ -8,14 +8,12 @@
     android:layout_height="1920px"
     android:layout_width="1080px">
 
-
     <EditText
-        android:layout_margin="20dp"
+        android:layout_margin="60dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Enter Your Toast Here..."
         android:id="@+id/edit_text_one"/>
-
 
     <Button
         android:layout_width="wrap_content"
@@ -23,24 +21,14 @@
         android:text="press to toast"
         android:id="@+id/button_one"
         android:layout_toRightOf="@+id/edit_text_one"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="60dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="press to change color"
         android:id="@+id/button_two"
-        android:layout_below="@+id/edit_text_one"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="press to parse json"
-        android:id="@+id/button_three"
-        android:layout_below="@+id/button_two"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="400dp"/>
 
 </RelativeLayout>
