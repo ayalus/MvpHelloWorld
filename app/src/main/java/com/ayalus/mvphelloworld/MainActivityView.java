@@ -5,7 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.ayalus.mvphelloworld.AccuWeatherFiveDayForecast.AccuWeatherForecastResponseObj;
 
 import org.json.JSONException;
 
@@ -21,6 +24,15 @@ public class MainActivityView extends AppCompatActivity implements MainActivityI
 
     @BindView(R.id.background)
     RelativeLayout relativeLayout;
+
+    @BindView(R.id.weather_forecast_text_view_one)
+    TextView weatherForecastTextViewOne;
+
+    @BindView(R.id.weather_forecast_text_view_two)
+    TextView weatherForecastTextViewTwo;
+
+    @BindView(R.id.weather_forecast_text_view_three)
+    TextView weatherForecastTextViewThree;
 
     MainActivityInterface.Presenter mPresenter;
 
@@ -69,9 +81,18 @@ public class MainActivityView extends AppCompatActivity implements MainActivityI
 
     @Override
     public void showToast(String stringToast) {
-//        Log.v(TAG, "showToast called");
         Toast.makeText(this, stringToast+editTextOne.getText().toString(), Toast.LENGTH_SHORT).show();
     }
+
+
+    public void showWeatherInfo(AccuWeatherForecastResponseObj weatherObject){
+        Log.v(TAG, "SHOWING INFO FROM ACCUWEATHER");
+        weatherForecastTextViewOne.setText(weatherObject.getHeadline().getText());
+        weatherForecastTextViewTwo.setText("TODAYS HIGH: "+weatherObject.getDailyForecasts().get(0).getTemperature().getMaximum().getValue());
+        weatherForecastTextViewThree.setText("TODAYS LOW: "+weatherObject.getDailyForecasts().get(0).getTemperature().getMinimum().getValue());
+    }
+
+
 
 //---------------------------------override methods-----------------------------------------------------------------------------
 

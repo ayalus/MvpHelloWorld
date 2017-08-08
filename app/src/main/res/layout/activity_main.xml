@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/background"
-    android:background="#5974AB"
+    android:background="#F6F0E4"
     tools:context="com.ayalus.mvphelloworld.MainActivityView"
     android:layout_height="1920px"
     android:layout_width="1080px">
@@ -37,7 +37,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="press to parse json"
+        android:text="Press to do nothing"
         android:id="@+id/button_three"
         android:layout_below="@+id/button_two"
         android:layout_marginLeft="20dp"
@@ -51,5 +51,38 @@
         android:layout_below="@+id/button_three"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/weather_forecast_text_view_one"
+        android:layout_width="520dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_four"
+        android:textColor="#1D1D1D"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/weather_forecast_text_view_two"
+        android:layout_width="520dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_forecast_text_view_one"
+        android:textColor="#1D1D1D"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/weather_forecast_text_view_three"
+        android:layout_width="520dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_forecast_text_view_two"
+        android:textColor="#1D1D1D"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        />
 
 </RelativeLayout>

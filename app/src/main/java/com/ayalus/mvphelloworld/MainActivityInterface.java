@@ -2,6 +2,8 @@ package com.ayalus.mvphelloworld;
 
 import android.widget.RelativeLayout;
 
+import com.ayalus.mvphelloworld.AccuWeatherFiveDayForecast.AccuWeatherForecastResponseObj;
+
 import org.json.JSONException;
 
 /**
@@ -22,5 +24,6 @@ interface MainActivityInterface {
         void showToast(String stringToast);
         void buttonPressed();
         void buttonTwoPressed();
+        void showWeatherInfo(AccuWeatherForecastResponseObj weatherObject);
     }
 }
