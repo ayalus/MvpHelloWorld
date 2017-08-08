@@ -15,6 +15,7 @@ interface MainActivityInterface {
         void logString(String stringToLog) throws JSONException;
         void changeBackgroundColor(RelativeLayout layout,int color);
         void logStringJson();
+        void getAccuWeather();
     }
 
      interface View {

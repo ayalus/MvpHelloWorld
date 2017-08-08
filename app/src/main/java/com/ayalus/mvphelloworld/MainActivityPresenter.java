@@ -25,7 +25,6 @@ public class MainActivityPresenter implements MainActivityInterface.Presenter{
     }
 
 
-
     @Override
     public void onResume() {
         Log.v(TAG, "onResume() CALLED...");
@@ -40,7 +39,7 @@ public class MainActivityPresenter implements MainActivityInterface.Presenter{
 
     @Override
     public void logStringJson() {
-        JSONObject mainObject = null;
+        JSONObject mainObject;
         try {
             mainObject = new JSONObject(jsonString);
             String  ip_address = mainObject.getString("ip");
@@ -61,6 +60,7 @@ public class MainActivityPresenter implements MainActivityInterface.Presenter{
         }
     }
 
+
     @Override
     public void changeBackgroundColor(RelativeLayout layout,int color) {
         colorVar -= 5000;
@@ -69,6 +69,9 @@ public class MainActivityPresenter implements MainActivityInterface.Presenter{
         layout.setBackgroundColor(color);
     }
 
+    @Override
+    public void getAccuWeather() {
+        Log.v(TAG, "getAccuWeather() called in Presentor");
 
-
+    }
 }

@@ -43,4 +43,13 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="press to get Weather"
+        android:id="@+id/button_four"
+        android:layout_below="@+id/button_three"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"/>
+
 </RelativeLayout>

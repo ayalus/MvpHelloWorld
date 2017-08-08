@@ -56,9 +56,15 @@ public class MainActivityView extends AppCompatActivity implements MainActivityI
     }
 
     @OnClick(R.id.button_three)
-    public void buttonTwoParseJson() {
+    public void buttonThreeParseJson() {
         Log.v(TAG, "button to parse the String Json.");
         mPresenter.logStringJson();
+    }
+
+    @OnClick(R.id.button_four)
+    public void buttonFourGetAccuWeather() {
+        Log.v(TAG, "API CALL TO GET AccuWeather 5 day forecast.");
+        mPresenter.getAccuWeather();
     }
 
     @Override
