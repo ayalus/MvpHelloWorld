@@ -2,9 +2,7 @@ package com.ayalus.mvphelloworld.bus;
 
 import com.squareup.otto.Bus;
 
-/**
- * Created by miguel on 15/04/2016.
- */
+
 public final class BusProvider {
 
     private static final MainThreadBus BUS = new MainThreadBus();
